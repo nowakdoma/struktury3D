@@ -18,8 +18,7 @@ def main():
     pdb_file_path = args.f
 
     if args.p:
-        structure = PDB.PDBParser(QUIET=True).get_structure("protein", pdb_file_path)
-        plotRamachandran(structure)
+        plotRamachandran(pdb_file_path)
     elif args.r:
         getTorsionAngles(pdb_file_path)
     else:
